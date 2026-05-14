@@ -13,6 +13,14 @@
       --card:#ffffff;
     }
     *{box-sizing:border-box;margin:0;padding:0;font-family: "Poppins", Arial, sans-serif}
+    img{
+  max-width:100%;
+  height:auto;
+}
+
+html{
+  scroll-behavior:smooth;
+}
     body{background:#f4f6f9;color:#222;line-height:1.6}
     header{
       background:var(--blue);
@@ -27,10 +35,18 @@
     .brand img{height:56px;border-radius:8px;object-fit:cover}
     .brand h1{font-size:18px;letter-spacing:0.3px}
     nav a{color:#fff;text-decoration:none;margin-left:14px;font-weight:600}
-    nav a:hover{text-decoration:underline}
+    nav a:hover{
+  color:#90e0ef;
+  transition:0.3s;
+}
     .top-right{display:flex;align-items:center;gap:10px}
     .social a{display:inline-block;margin-left:8px;text-decoration:none}
     .social svg{width:22px;height:22px;vertical-align:middle;fill:#fff;opacity:0.95}
+   .social a:hover svg{
+  transform:scale(1.15);
+  transition:0.3s;
+  opacity:0.8;
+}
 
     /* Hero */
     .hero{
@@ -67,36 +83,105 @@
     .form-row{display:flex;gap:12px;margin-bottom:12px}
     .form-row .col{flex:1}
     label{display:block;font-size:13px;margin-bottom:6px}
-    input[type="text"],input[type="email"],input[type="tel"],textarea,select{
+    input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select{
       width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px
     }
     textarea{min-height:110px;resize:vertical}
-    .btn{display:inline-block;background:var(--blue);color:#fff;padding:10px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+    .btn{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+    .btn:hover{
+  background:#0077b6;
+  transition:0.3s;
+}
     .note{font-size:13px;color:var(--muted);margin-top:8px}
 
     footer{background:var(--blue);color:#fff;padding:18px 20px;margin-top:30px}
     .footer-grid{max-width:1100px;margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .footer-grid a{color:#caf0f8;text-decoration:none}
-   @media(max-width:768px){
+  @media(max-width:768px){
+
   header{
     flex-direction:column;
     align-items:flex-start;
+    padding:15px;
+  }
+
+  .brand{
+    width:100%;
   }
 
   nav{
+    width:100%;
     display:flex;
     flex-wrap:wrap;
     gap:10px;
+    margin-top:10px;
+  }
+
+  nav a{
+    margin-left:0;
+    font-size:14px;
+  }
+
+  .top-right{
+    width:100%;
+    justify-content:space-between;
+    margin-top:10px;
+  }
+
+  .hero{
+    min-height:55vh;
+    padding:20px;
   }
 
   .hero h2{
-    font-size:22px;
+    font-size:24px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .container{
+    margin-top:-30px;
+    padding:0 12px;
   }
 
   .two-col{
     grid-template-columns:1fr;
   }
-} 
+
+  .principal{
+    flex-direction:column;
+  }
+
+  .principal img{
+    max-width:100%;
+  }
+
+  .form-row{
+    flex-direction:column;
+  }
+
+  .footer-grid{
+    flex-direction:column;
+    text-align:center;
+  }
+}
   </style>
 </head>
 <body>
@@ -155,7 +240,7 @@
       <section id="about" class="card">
         <h2>About Us</h2>
         <p class="muted">
-          Since its inception in 2017 with just forty students, under the umbrella of Karunya Educational Trust at our own premises situated in Sri. Putrampappa, Karunya First Grade College has reached up to the mark of 600 students within a short span of five years. We at Karunya, try to ensure the best of continuous learning and the overall development of students to meet the needs of individuals who lead the nation of tomorrow. College offers B.Com course as per the Bangalore University syllabus to build competent and initiative professionals.
+          Since its inception in 2017 with just forty students, under the umbrella of Karunya Educational Trust at our own premises situated in Sri. Putrampappa, Karunya First Grade College has reached up to the mark of 600 students within a short span of nine years. We at Karunya, try to ensure the best of continuous learning and the overall development of students to meet the needs of individuals who lead the nation of tomorrow. College offers B.Com course as per the Bangalore University syllabus to build competent and initiative professionals.
         </p>
         <p class="muted" style="margin-top:10px">
           Karunya First Grade College is committed to developing competent human resources who can fit themselves in the global scenario for excellence and professionalism. With this end, the institution engages in enabling excellence in education for an effective learning environment. We emphasize curricular, co-curricular and extra-curricular activities and have achieved tremendous academic results — 80% of students secured exemplary marks (>85%) and many others gained first class distinction.
@@ -169,9 +254,9 @@
             <div class="principal">
               <img src="pandu-sir.jpeg" alt="Principal Panduranga">
               <div>
-                <h3>PANDURANGA, M.Com, — Principal</h3>
+                <h3>PANDURANGA, M.Com — Principal</h3>
                 <p class="muted">
-                  Karunya is a collegiate family completing five years successfully and running fast in achieving our dreams of servicing society through education. We have started with the intention of providing education to the students for achieving their dreams.
+                  Karunya is a collegiate family completing nine years successfully and running fast in achieving our dreams of servicing society through education. We have started with the intention of providing education to the students for achieving their dreams.
                 </p>
                 <p class="muted" style="margin-top:8px">
                   We want our students to become future leaders in academic and non-academic domains. The institution focuses on 360° development of personality, and provides opportunities to students from all sections of society. We welcome all students and wish you a productive, knowledgeable academic journey.
@@ -220,10 +305,10 @@
 
       <section id="admission" class="card">
         <h2>Admission Enquiry</h2>
-        <p class="muted">Fill the form below and click Submit. (This will open your default email client to send the details to <strong>info.kfgc@gmail.com</strong>.)</p>
-
-        <!-- Simple mailto form fallback (opens user's email client). Replace with Formspree later if you want server emails -->
-        <form action="mailto:info.kfgc@gmail.com" method="post" enctype="text/plain">
+        <p class="muted">Fill the form below and click Submit. Our admissions team will contact you shortly.</p>
+        <form action="https://formspree.io/f/xgodbna1" method="POST">
+          <input type="hidden" name="_subject" value="New Admission Enquiry">
+          <input type="hidden" name="_next" value="thankyou.html">
           <div class="form-row">
             <div class="col">
               <label for="name">Full Name</label>
@@ -231,7 +316,7 @@
             </div>
             <div class="col">
               <label for="dob">Date of Birth</label>
-              <input id="dob" name="DOB" type="text" placeholder="DD-MM-YYYY">
+              <input id="dob" name="DOB" type="date" required>
             </div>
           </div>
 
@@ -242,14 +327,21 @@
             </div>
             <div class="col">
               <label for="phone">Phone</label>
-              <input id="phone" name="Phone" type="tel" required>
+              <input
+  id="phone"
+  name="Phone"
+  type="tel"
+  pattern="[0-9]{10}"
+  maxlength="10"
+  placeholder="Enter 10 digit number"
+  required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col">
               <label for="course">Course Interested</label>
-              <select id="course" name="Course">
+              <select id="course" name="Course" required>
                 <option>B.Com (Regular)</option>
                 <option>B.Com (Accounting & Finance)</option>
                 <option>B.Com (Computer Applications)</option>
@@ -258,7 +350,7 @@
             </div>
             <div class="col">
               <label for="address">City / Address</label>
-              <input id="address" name="Address" type="text">
+              <input id="address" name="Address" type="text" required>
             </div>
           </div>
 
@@ -268,9 +360,9 @@
           </div>
 
           <button type="submit" class="btn">Submit Admission Enquiry</button>
-          <p class="note">If the form opens your email app, click send to deliver the enquiry. For automatic email delivery without opening mail, we can connect Formspree or a backend later.</p>
-        </form>
-      </section>
+         <p class="note">Your enquiry will be submitted securely. Our admissions team will contact you shortly.</p>
+          </form>
+        </section>
 
       <section id="contact" class="card">
         <h2>Contact & Address</h2>
